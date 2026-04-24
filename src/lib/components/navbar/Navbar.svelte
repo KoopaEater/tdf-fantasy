@@ -10,13 +10,13 @@
         <div class="logo-dropdown-wrapper">
             <a id="logo" href="/"><h3>LOGO</h3></a>
             <button  onclick={dropMenu} id="dropdown-btn" title="Dropdown">
-                <wa-icon name="bars" variant="solid"></wa-icon>
+                <wa-icon name="bars"></wa-icon>
             </button>
         </div>
         <div class="pages" class:closed={!navbar_open}>
-            <a href="/A"><p>A</p></a>
-            <a href="/B"><p>B</p></a>
-            <a href="/C"><p>C</p></a>
+            <a href="/stilling"><p>Stilling</p></a>
+            <a href="/resultater"><p>Resultater</p></a>
+            <a href="/detaljer"><p>Holddetaljer</p></a>
         </div>
     </div>
 </nav>
@@ -26,12 +26,12 @@
         position: sticky;
         top: 0;
         background-color: var(--color-primary);
-        padding: 1rem;
         margin: 0;
         text-align: center;
     }
     .nav-content {
-        max-width: 800px;
+        max-width: var(--max-page-width);
+        padding: 1rem;
         margin-left: auto;
         margin-right: auto;
         display: flex;
