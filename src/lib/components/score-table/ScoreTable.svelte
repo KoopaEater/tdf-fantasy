@@ -92,9 +92,9 @@
         <thead>
         <tr>
             <th></th>
-            <th>Hold 1</th>
-            <th>Hold 2</th>
-            <th>Hold 3</th>
+            <th><TextWithScore text="Team vi ska' hjem" score="70" scorecolor="var(--color-gold)"></TextWithScore></th>
+            <th><TextWithScore text="Hold op" score="69" scorecolor="var(--color-silver)"></TextWithScore></th>
+            <th><TextWithScore text="Hold da ferie" score="35" scorecolor="var(--color-bronze)"></TextWithScore></th>
         </tr>
         </thead>
 
