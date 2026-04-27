@@ -18,5 +18,6 @@
         border-radius: 10px;
         padding: 4px 8px;
         white-space: nowrap;
+        font-weight: bold;
     }
 </style>

@@ -1,1 +1,1 @@
-<h1>Detaljer</h1>
+<h1>Holddetaljer</h1>

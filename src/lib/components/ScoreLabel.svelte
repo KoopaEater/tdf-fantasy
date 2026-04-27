@@ -1,11 +1,11 @@
 <script>
     import ScoreBox from "$lib/components/ScoreBox.svelte";
 
-    let { text, score, scorecolor } = $props();
+    let { score, scorecolor = "white", children } = $props();
 </script>
 
 <div class="wrapper">
-    {text}
+    {@render children()}
     <ScoreBox score={score} color={scorecolor}></ScoreBox>
 </div>
 
@@ -17,5 +17,7 @@
         justify-content: space-between;
         align-items: center;
         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 </style>

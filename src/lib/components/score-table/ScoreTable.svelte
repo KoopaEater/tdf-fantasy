@@ -1,13 +1,13 @@
-<script>
+<script lang="ts">
     import RiderType from "$lib/components/RiderType.svelte";
-    import TextWithScore from "$lib/components/TextWithScore.svelte";
+    import ScoreLabel from "$lib/components/ScoreLabel.svelte";
+    import TeamNameLeaderLabel from "$lib/components/TeamNameLeaderLabel.svelte";
 
     // Helper: map score → color
-    const scoreColor = (s) => {
-        if (s <= 5) return "lightgray";
-        if (s <= 10) return "lightgreen";
-        if (s <= 15) return "lightblue";
-        return "gold";
+    const scoreColor = (score: number) => {
+        if (score <= 5) return "var(--color-bronze)";
+        if (score <= 10) return "var(--color-silver)";
+        return "var(--color-gold)";
     };
 
     // Hardcoded riders + scores
@@ -92,9 +92,21 @@
         <thead>
         <tr>
             <th></th>
-            <th><TextWithScore text="Team vi ska' hjem" score="70" scorecolor="var(--color-gold)"></TextWithScore></th>
-            <th><TextWithScore text="Hold op" score="69" scorecolor="var(--color-silver)"></TextWithScore></th>
-            <th><TextWithScore text="Hold da ferie" score="35" scorecolor="var(--color-bronze)"></TextWithScore></th>
+            <th>
+                <ScoreLabel score="70" scorecolor="var(--color-gold)">
+                    <TeamNameLeaderLabel teamname="Team vi ska ik hjem" leader="Mads Hansen"/>
+                </ScoreLabel>
+            </th>
+            <th>
+                <ScoreLabel score="58" scorecolor="var(--color-silver)">
+                    <TeamNameLeaderLabel teamname="Hold op" leader="Andreas Sloth"/>
+                </ScoreLabel>
+            </th>
+            <th>
+                <ScoreLabel score="49" scorecolor="var(--color-bronze)">
+                    <TeamNameLeaderLabel teamname="Hold da ferie" leader="Max Kørner Andersen"/>
+                </ScoreLabel>
+            </th>
         </tr>
         </thead>
 
@@ -107,11 +119,9 @@
 
                 {#each row.riders as rider}
                     <td>
-                        <TextWithScore
-                                text={rider.name}
-                                score={rider.score}
-                                scorecolor={scoreColor(rider.score)}
-                        />
+                        <ScoreLabel score={rider.score} scorecolor={scoreColor(rider.score)}>
+                            {rider.name}
+                        </ScoreLabel>
                     </td>
                 {/each}
             </tr>
@@ -125,13 +135,15 @@
         overflow-x: auto;
     }
     tbody th, thead th:first-child {
-        vertical-align: middle;
         position: sticky;
         left: 0;
         z-index: 3;
     }
+    th {
+        vertical-align: middle;
+    }
     td:nth-child(odd), th:nth-child(odd) {
-        background: #FFD;
+        background: var(--color-primary-subtle);
     }
     th:first-child {
         background: transparent;
