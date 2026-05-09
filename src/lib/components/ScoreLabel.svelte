@@ -5,8 +5,8 @@
 </script>
 
 <div class="wrapper">
-    {@render children()}
     <ScoreBox score={score} color={scorecolor}></ScoreBox>
+    {@render children()}
 </div>
 
 <style>
@@ -14,7 +14,6 @@
         display: flex;
         flex-direction: row;
         gap: 1rem;
-        justify-content: space-between;
         align-items: center;
     }
 
