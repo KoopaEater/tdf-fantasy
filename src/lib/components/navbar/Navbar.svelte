@@ -10,10 +10,11 @@
         <div class="logo-dropdown-wrapper">
             <a id="logo" href="/"><h3>LOGO</h3></a>
             <button  onclick={dropMenu} id="dropdown-btn" title="Dropdown">
-                <wa-icon name="bars"></wa-icon>
+                <wa-icon class:hidden={navbar_open} name="bars" style="margin:0"></wa-icon>
+                <wa-icon class:hidden={!navbar_open} name="xmark" style="margin:0"></wa-icon>
             </button>
         </div>
-        <div class="pages" class:closed={!navbar_open}>
+        <div class="pages" class:hidden={!navbar_open}>
             <a href="/stilling"><p>Stilling</p></a>
             <a href="/resultater"><p>Resultater</p></a>
             <a href="/detaljer"><p>Holddetaljer</p></a>
@@ -74,7 +75,7 @@
             margin-right: auto;
             width: 100%;
         }
-        .closed {
+        .hidden {
             display: none;
         }
     }
