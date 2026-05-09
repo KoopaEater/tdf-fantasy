@@ -5,6 +5,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    color: var(--color-secondary);
 }
 
 button {
@@ -31,4 +32,11 @@ input {
 }
 input:focus {
     outline-color: var(--color-primary);
+}
+
+a {
+    color: var(--color-secondary);
+}
+a:hover {
+    color: var(--color-secondary-light);
 }
