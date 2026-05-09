@@ -1,7 +1,8 @@
 <script lang="ts">
     import RiderType from "$lib/components/RiderType.svelte";
     import ScoreLabel from "$lib/components/ScoreLabel.svelte";
-    import TeamNameLeaderLabel from "$lib/components/TeamNameLeaderLabel.svelte";
+    import TeamNameLeader from "$lib/components/TeamNameLeader.svelte";
+    import RiderName from "$lib/components/RiderName.svelte";
 
     // Helper: map score → color
     const scoreColor = (score: number) => {
@@ -94,17 +95,17 @@
             <th></th>
             <th>
                 <ScoreLabel score="70" scorecolor="var(--color-gold)">
-                    <TeamNameLeaderLabel teamname="Team vi ska ik hjem" leader="Mads Hansen"/>
+                    <TeamNameLeader teamname="Team vi ska ik hjem" leader="Mads Hansen"/>
                 </ScoreLabel>
             </th>
             <th>
                 <ScoreLabel score="58" scorecolor="var(--color-silver)">
-                    <TeamNameLeaderLabel teamname="Hold op" leader="Andreas Sloth"/>
+                    <TeamNameLeader teamname="Hold op" leader="Andreas Sloth"/>
                 </ScoreLabel>
             </th>
             <th>
                 <ScoreLabel score="49" scorecolor="var(--color-bronze)">
-                    <TeamNameLeaderLabel teamname="Hold da ferie" leader="Max Kørner Andersen"/>
+                    <TeamNameLeader teamname="Hold da ferie" leader="Max Kørner Andersen"/>
                 </ScoreLabel>
             </th>
         </tr>
@@ -120,7 +121,7 @@
                 {#each row.riders as rider}
                     <td>
                         <ScoreLabel score={rider.score} scorecolor={scoreColor(rider.score)}>
-                            {rider.name}
+                            <RiderName>{rider.name}</RiderName>
                         </ScoreLabel>
                     </td>
                 {/each}
@@ -133,6 +134,10 @@
 <style>
     .table-wrapper {
         overflow-x: auto;
+    }
+    table {
+        table-layout: fixed;
+        width: max-content;
     }
     tbody th, thead th:first-child {
         position: sticky;
@@ -151,7 +156,21 @@
     tr {
         border: none;
     }
+    thead th:not(:first-child), tbody td:not(:first-child) {
+        width: 220px;
+        min-width: 220px;
+        max-width: 220px;
+    }
     thead tr {
+        border-bottom: 2px solid;
+    }
+    tbody tr:nth-child(1) {
+        border-bottom: 1px solid;
+    }
+    tbody tr:nth-child(3) {
+        border-bottom: 1px solid;
+    }
+    tbody tr:nth-child(6) {
         border-bottom: 1px solid;
     }
 </style>

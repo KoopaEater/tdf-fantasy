@@ -3,20 +3,20 @@
 </script>
 
 <div>
-    <p id="teamname">{teamname}</p>
-    <p id="leader">{leader}</p>
+    <span class="line" id="teamname">{teamname}</span>
+    <span class="line" id="leader">{leader}</span>
 </div>
 
 <style>
     div {
         display: flex;
         flex-direction: column;
+        min-width: 0;
     }
-    p {
-        margin: 0;
+    .line {
         white-space: nowrap;
-        overflow: hidden;
         text-overflow: ellipsis;
+        overflow: hidden;
     }
     #teamname {
         font-weight: bold;

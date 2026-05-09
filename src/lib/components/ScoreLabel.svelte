@@ -16,8 +16,6 @@
         gap: 1rem;
         justify-content: space-between;
         align-items: center;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
     }
+
 </style>
