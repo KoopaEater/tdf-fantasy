@@ -10,8 +10,7 @@
         <div class="logo-dropdown-wrapper">
             <a id="logo" href="/"><h3>LOGO</h3></a>
             <button  onclick={dropMenu} id="dropdown-btn" title="Dropdown">
-                <wa-icon class:hidden={navbar_open} name="bars" style="margin:0"></wa-icon>
-                <wa-icon class:hidden={!navbar_open} name="xmark" style="margin:0"></wa-icon>
+                <wa-icon name={navbar_open ? "xmark" : "bars"}></wa-icon>
             </button>
         </div>
         <div class="pages" class:hidden={!navbar_open}>
