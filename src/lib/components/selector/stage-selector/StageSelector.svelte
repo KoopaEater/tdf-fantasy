@@ -6,17 +6,17 @@
 </script>
 
 <Selector title="VÆLG ETAPE">
-    <button title="first stage" onclick={() => stage = minStage}>
+    <button title="Første etape" onclick={() => stage = minStage}>
         <wa-icon name="angles-left"></wa-icon>
     </button>
-    <button title="previous stage" onclick={() => stage--}>
+    <button title="Forrige etape" onclick={() => stage--}>
         <wa-icon name="angle-left"></wa-icon>
     </button>
     <NumberInput bind:value={stage}></NumberInput>
-    <button title="next stage" onclick={() => stage++}>
+    <button title="Næste etape" onclick={() => stage++}>
         <wa-icon name="angle-right"></wa-icon>
     </button>
-    <button title="latest stage" onclick={() => stage = maxStage}>
+    <button title="Seneste etape" onclick={() => stage = maxStage}>
         <wa-icon name="angles-right"></wa-icon>
     </button>
 </Selector>

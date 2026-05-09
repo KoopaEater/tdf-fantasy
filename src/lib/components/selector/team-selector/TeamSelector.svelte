@@ -5,13 +5,13 @@ import TeamNameLeader from "$lib/components/TeamNameLeader.svelte";
 </script>
 
 <Selector title="VÆLG HOLD">
-    <button title="Previous team">
+    <button title="Forrige hold">
         <wa-icon name="angle-left"></wa-icon>
     </button>
     <div class="team-container">
         <TeamNameLeader teamname="Team vi ska ik hjem" leader="Mads Hansen"/>
     </div>
-    <button title="Next team">
+    <button title="Næste hold">
         <wa-icon name="angle-right"></wa-icon>
     </button>
 </Selector>
