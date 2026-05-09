@@ -121,7 +121,7 @@
                 {#each row.riders as rider}
                     <td>
                         <ScoreLabel score={rider.score} scorecolor={scoreColor(rider.score)}>
-                            <RiderName>{rider.name}</RiderName>
+                            <RiderName name={rider.name}/>
                         </ScoreLabel>
                     </td>
                 {/each}

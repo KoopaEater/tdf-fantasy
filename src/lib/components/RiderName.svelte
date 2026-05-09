@@ -1,9 +1,9 @@
 <script>
-    let { children } = $props();
+    let { name } = $props();
 </script>
 
-<span class="wrapper">
-    {@render children()}
+<span class="wrapper" title={name}>
+    {name}
 </span>
 
 <style>

@@ -2,7 +2,7 @@
     let { teamname, leader } = $props();
 </script>
 
-<div>
+<div title="{teamname}, {leader}">
     <span class="line" id="teamname">{teamname}</span>
     <span class="line" id="leader">{leader}</span>
 </div>
