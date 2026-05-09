@@ -21,10 +21,6 @@
     input {
         max-width: 3.5rem;
         text-align: center;
-        border: 2px solid var(--color-secondary);
-    }
-    input:focus {
-        outline-color: var(--color-primary);
     }
     input::-webkit-inner-spin-button,
     input::-webkit-outer-spin-button {

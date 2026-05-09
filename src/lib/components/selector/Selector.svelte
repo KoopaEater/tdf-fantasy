@@ -4,7 +4,9 @@
 
 <div class="wrapper">
     {title}
-    {@render children()}
+    <div class="selector-wrapper">
+        {@render children()}
+    </div>
 </div>
 
 <style>
@@ -14,5 +16,11 @@
         gap: 8px;
         align-items: center;
         width: fit-content;
+    }
+    .selector-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        align-items: stretch;
     }
 </style>

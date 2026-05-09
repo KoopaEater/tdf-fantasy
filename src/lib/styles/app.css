@@ -6,3 +6,23 @@ html, body {
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
+
+button {
+    all: unset;            /* remove ALL browser defaults */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: var(--color-secondary);
+    border-radius: 6px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+input {
+    border: 2px solid var(--color-secondary);
+    border-radius: 6px;
+}
+input:focus {
+    outline-color: var(--color-primary);
+}
