@@ -1,11 +1,11 @@
 <script lang="ts">
-    import NumberInput from "$lib/components/stage-selector/NumberInput.svelte";
+    import NumberInput from "$lib/components/selector/stage-selector/NumberInput.svelte";
+    import Selector from "$lib/components/selector/Selector.svelte";
 
     let { stage = $bindable(1), minStage = 1, maxStage = 99 } = $props();
 </script>
 
-<div class="wrapper">
-    VÆLG ETAPE
+<Selector title="VÆLG ETAPE">
     <div class="selector-wrapper">
         <button title="first stage" onclick={() => stage = minStage}>
             <wa-icon name="angles-left"></wa-icon>
@@ -21,16 +21,9 @@
             <wa-icon name="angles-right"></wa-icon>
         </button>
     </div>
-</div>
+</Selector>
 
 <style>
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        align-items: center;
-        width: fit-content;
-    }
     .selector-wrapper {
         display: flex;
         flex-direction: row;

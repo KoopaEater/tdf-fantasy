@@ -1,6 +1,6 @@
 <script>
     import ScoreTable from "$lib/components/score-table/ScoreTable.svelte";
-    import StageSelector from "$lib/components/stage-selector/StageSelector.svelte";
+    import StageSelector from "$lib/components/selector/stage-selector/StageSelector.svelte";
 </script>
 
 <h1>Resultater</h1>
