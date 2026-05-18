@@ -15,5 +15,6 @@
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         text-align: center;
         font-size: var(--score-box-font-size, medium);
+        line-height: 1.5;
     }
 </style>
