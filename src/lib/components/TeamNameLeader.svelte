@@ -12,6 +12,7 @@
         display: flex;
         flex-direction: column;
         min-width: 0;
+        line-height: normal;
     }
     .line {
         white-space: nowrap;

@@ -44,7 +44,7 @@
         --item-hover-bg: var(--color-primary-subtle);
         --item-is-active-bg: var(--color-primary);
         --item-is-active-color: var(--color-secondary);
-        --item-line-height: normal;
+        /*--item-line-height: normal;*/
         --item-padding: 8px;
         --list-border-radius: 6px;
     }
