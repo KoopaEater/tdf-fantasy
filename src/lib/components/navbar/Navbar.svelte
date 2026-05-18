@@ -28,6 +28,7 @@
         background-color: var(--color-primary);
         margin: 0;
         text-align: center;
+        z-index: 100;
     }
     .nav-content {
         max-width: var(--max-page-width);

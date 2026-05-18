@@ -3,22 +3,14 @@
     import Selector from "$lib/components/selector/Selector.svelte";
     import TeamNameLeader from "$lib/components/TeamNameLeader.svelte";
 
-    type Team = {
-        teamName: string,
-        leader: string,
-    };
-    let teams = [
-        {value: 1, teamName: "Team vi ska ik hjem", leader: "Mads Hansen"},
-        {value: 2, teamName: "Hold op", leader: "Andreas Sloth"},
-        {value: 3, teamName: "Hold da ferie", leader: "Max Kørner Andersen"}
-    ];
-    let selectedTeam: Team = $state(teams[0]);
+    let { selected = $bindable(), teams } = $props();
+
 
 </script>
 
 <Selector title="VÆLG HOLD">
     <div class="dropdown-wrapper">
-        <Select items={teams} bind:value={selectedTeam} clearable={false} searchable={false} placeholder="Vælg et hold" showChevron={true}>
+        <Select items={teams} bind:value={selected} clearable={false} searchable={false} placeholder="Vælg et hold" showChevron={true}>
             <div slot="item" let:item>
                 <!--{item.teamName}-->
                 <TeamNameLeader teamname={item.teamName} leader={item.leader} />
@@ -44,7 +36,6 @@
         --item-hover-bg: var(--color-primary-subtle);
         --item-is-active-bg: var(--color-primary);
         --item-is-active-color: var(--color-secondary);
-        /*--item-line-height: normal;*/
         --item-padding: 8px;
         --list-border-radius: 6px;
     }
